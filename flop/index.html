@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flop - 翻拍效果 </title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.cardbox{
+			position:relative;
+			width:200px;
+			height:380px;
+			cursor:pointer;
+			overflow:hidden;
+		}
+		.cards{
+			position:absolute;
+			width:100%;
+			height:100%;
+
+			-webkit-transition:transform .4s linear;
+			-moz-transition:transform .4s linear;
+			-ms-transition:transform .4s linear;
+			transition:transform .4s linear;
+
+			-webkit-transform-style: preserve-3d;
+			-moz-transform-style: preserve-3d;
+			-ms-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+
+			-webkit-backface-visibility:hidden;
+			-moz-backface-visibility:hidden;
+			-ms-backface-visibility:hidden;
+			backface-visibility:hidden;
+
+			left:0;
+			top:0;
+		}
+		.card-front{
+			-webkit-transform:rotateY(0deg);
+			-moz-transform:rotateY(0deg);
+			-ms-transform:rotateY(0deg);
+			transform:rotateY(0deg)
+		}
+		.card-back{
+			-webkit-transform:rotateY(180deg);
+			-moz-transform:rotateY(180deg);
+			-ms-transform:rotateY(180deg);
+			transform:rotateY(180deg);
+		}
+		.cardbox:hover .card-front{
+			-webkit-transition:transform .4s linear;
+			-moz-transition:transform .4s linear;
+			-ms-transition:transform .4s linear;
+			transition:transform .4s linear;
+			-webkit-transform:rotateY(180deg);
+			-moz-transform:rotateY(180deg);
+			-ms-transform:rotateY(180deg);
+			transform:rotateY(180deg)
+		}
+		.cardbox:hover .card-back{
+			-webkit-transition:transform .4s linear;
+			-moz-transition:transform .4s linear;
+			-ms-transition:transform .4s linear;
+			transition:transform .4s linear;
+
+			-webkit-transform:rotateY(0deg);
+			-moz-transform:rotateY(0deg);
+			-ms-transform:rotateY(0deg);
+			transform:rotateY(0deg);
+
+			z-index:10\0; /* 用于解决低版本浏览器对transform的不支持问题 */
+			*z-index:10;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="cardbox">
+		<!-- 牌的背面 -->
+		<div class="card-back cards">
+			<a href="#">
+				<img src="card-back.png" alt="">
+			</a>
+		</div>
+		<!-- 牌的正面 -->
+		<div class="card-front cards">
+			<a href="#">
+				<img src="card.png" alt="">
+			</a>
+		</div>
+	</div>
+</body>
+</html>
