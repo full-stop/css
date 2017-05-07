@@ -26,12 +26,12 @@ css3的animate属性会根据动画的时长来在我们定义的帧之间插入
 
 ```css
 @keyframes mask{
-	0%{
-		-webkit-mask-position:0% 0%;
-	}
-	100%{
-		-webkit-mask-position:100% 0%;
-	}
+0%{
+	-webkit-mask-position:0% 0%;
+}
+100%{
+	-webkit-mask-position:100% 0%;
+}
 }
 ```
 
