@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>rotate-radius-border</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.button{
+			display: block;
+			position:relative;
+			width: 254px;
+			height: 254px;
+			margin:100px auto;
+		}
+		.button .link-img{
+			position:absolute;
+			width: 254px;
+			height: 254px;
+			background:url(images/btn-one.png) no-repeat;
+			transition: all .4s ease;
+		}
+
+		.button .link-border{
+			position:absolute;
+			width: 185px;
+			height: 186px;
+			border:1px solid #a5a6d1;
+			left:50%;
+			top:50%;
+			margin-left:-94px;
+			margin-top:-94px;
+			border-radius:15px;
+			opacity:.7;
+			filter:alpha(opacity=70);
+			transition: all .5s ease;
+		}
+		.link-border-one{
+			transform:rotate(-20deg);
+		}
+		.link-border-two{
+			transform:rotate(-25deg);
+		}
+		.link-border-thr{
+			transform:rotate(-30deg);
+		}
+
+		.button:hover .link-img{
+			transition: all .4s ease;
+			background:url(images/btn-one-hover.png) no-repeat;
+		}
+
+		.button:hover .link-border{
+			transform:rotate(-45deg);
+			transition: all .5s ease;
+			opacity:0;
+		}
+	</style>
+</head>
+<body>
+	<a href="javascript:;" class="button">
+		<div class="link-border link-border-one"></div>
+		<div class="link-border link-border-two"></div>
+		<div class="link-border link-border-thr"></div>
+		<div class="link-img"></div>
+	</a>
+</body>
+</html>
